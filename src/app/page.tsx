@@ -1,18 +1,21 @@
 'use client';
+
 import React, { useState, useEffect } from 'react';
 import { 
   MapPin, 
   Car, 
   TreePine, 
   BusFront, 
-  ArrowRight,
-  Info
+  ArrowRight
 } from 'lucide-react';
 
-const App = () => {
+export default function App() {
   const [scrolled, setScrolled] = useState(false);
 
-  // 監聽滾動以改變導覽列樣式 (Wix 經典行為：滾動後出現實體底色)
+  // 【關鍵修正】加上 GitHub 專案名稱的前綴路徑
+  const basePath = '/tucheng-store-rental';
+
+  // 監聽滾動以改變導覽列樣式
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 80);
@@ -64,7 +67,7 @@ const App = () => {
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: "url('/p1.jpg')",
+            backgroundImage: `url('${basePath}/p1.jpg')`,
           }}
         >
           {/* 暗色遮罩以凸顯文字 */}
@@ -88,7 +91,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 關於空間 The Space - 經典 Wix 左右圖文分割排列 (使用 p2.jpg) */}
+      {/* 關於空間 The Space (使用 p2.jpg) */}
       <section id="space" className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           
@@ -130,7 +133,7 @@ const App = () => {
 
           <div className="w-full lg:w-7/12 h-[500px] lg:h-[700px] bg-neutral-100 relative">
             <img 
-              src="/p2.jpg" 
+              src={`${basePath}/p2.jpg`} 
               alt="店面室內示意圖" 
               className="absolute inset-0 w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-500"
             />
@@ -139,27 +142,27 @@ const App = () => {
         </div>
       </section>
 
-      {/* 空間藝廊 Gallery - (展示 p3, p4, p5, p6) */}
+      {/* 空間藝廊 Gallery (展示 p3, p4, p5, p6) */}
       <section className="pb-24 lg:pb-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="relative h-[300px] lg:h-[450px] overflow-hidden group bg-neutral-100">
-              <img src="/p3.jpg" alt="空間實景 1" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+              <img src={`${basePath}/p3.jpg`} alt="空間實景 1" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
             </div>
             <div className="relative h-[300px] lg:h-[450px] overflow-hidden group bg-neutral-100">
-              <img src="/p4.jpg" alt="空間實景 2" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+              <img src={`${basePath}/p4.jpg`} alt="空間實景 2" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
             </div>
             <div className="relative h-[300px] lg:h-[450px] overflow-hidden group bg-neutral-100">
-              <img src="/p5.jpg" alt="空間實景 3" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+              <img src={`${basePath}/p5.jpg`} alt="空間實景 3" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
             </div>
             <div className="relative h-[300px] lg:h-[450px] overflow-hidden group bg-neutral-100">
-              <img src="/p6.jpg" alt="空間實景 4" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+              <img src={`${basePath}/p6.jpg`} alt="空間實景 4" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 四大優勢 Amenities - 網格搭配極簡線條 Icon */}
+      {/* 四大優勢 Amenities */}
       <section className="py-24 lg:py-32 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           
@@ -206,7 +209,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 交通樞紐 Transportation - (展示捷運與交流道圖片) */}
+      {/* 交通樞紐 Transportation */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           
@@ -224,7 +227,7 @@ const App = () => {
             <div className="bg-neutral-50 border border-neutral-100 p-4">
               <p className="text-xs tracking-widest uppercase text-neutral-400 mb-3">未來萬大線 LG10 站</p>
               <img 
-                src="/中正國中站LG10.png" 
+                src={`${basePath}/中正國中站LG10.png`} 
                 alt="中正國中站LG10" 
                 className="w-full h-auto object-contain"
               />
@@ -232,7 +235,7 @@ const App = () => {
             <div className="bg-neutral-50 border border-neutral-100 p-4">
               <p className="text-xs tracking-widest uppercase text-neutral-400 mb-3">國道 3 號金城交流道</p>
               <img 
-                src="/國3金城交流道.png" 
+                src={`${basePath}/國3金城交流道.png`} 
                 alt="國道3號金城交流道" 
                 className="w-full h-auto object-contain"
               />
@@ -242,7 +245,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 聯絡區塊 Contact - 滿版簡潔聯絡資訊 */}
+      {/* 聯絡區塊 Contact */}
       <section id="contact" className="py-32 bg-neutral-900 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl lg:text-4xl font-light tracking-wide mb-6">
@@ -291,6 +294,4 @@ const App = () => {
       </footer>
     </div>
   );
-};
-
-export default App;
+}
