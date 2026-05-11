@@ -58,12 +58,12 @@ const App = () => {
         </div>
       </header>
 
-      {/* 主視覺 Hero - 滿版大圖與極簡文字 */}
+      {/* 主視覺 Hero - 滿版大圖與極簡文字 (使用 p1.jpg) */}
       <section className="relative h-screen min-h-[700px] flex items-center justify-center">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80')",
+            backgroundImage: "url('/p1.jpg')",
           }}
         >
           {/* 暗色遮罩以凸顯文字 */}
@@ -87,7 +87,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 關於空間 The Space - 經典 Wix 左右圖文分割排列 */}
+      {/* 關於空間 The Space - 經典 Wix 左右圖文分割排列 (使用 p2.jpg) */}
       <section id="space" className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           
@@ -129,12 +129,32 @@ const App = () => {
 
           <div className="w-full lg:w-7/12 h-[500px] lg:h-[700px] bg-neutral-100 relative">
             <img 
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" 
+              src="/p2.jpg" 
               alt="店面室內示意圖" 
-              className="absolute inset-0 w-full h-full object-cover grayscale-[20%]"
+              className="absolute inset-0 w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-500"
             />
           </div>
 
+        </div>
+      </section>
+
+      {/* 空間藝廊 Gallery - (展示 p3, p4, p5, p6) */}
+      <section className="pb-24 lg:pb-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="relative h-[300px] lg:h-[450px] overflow-hidden group bg-neutral-100">
+              <img src="/p3.jpg" alt="空間實景 1" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+            </div>
+            <div className="relative h-[300px] lg:h-[450px] overflow-hidden group bg-neutral-100">
+              <img src="/p4.jpg" alt="空間實景 2" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+            </div>
+            <div className="relative h-[300px] lg:h-[450px] overflow-hidden group bg-neutral-100">
+              <img src="/p5.jpg" alt="空間實景 3" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+            </div>
+            <div className="relative h-[300px] lg:h-[450px] overflow-hidden group bg-neutral-100">
+              <img src="/p6.jpg" alt="空間實景 4" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -185,23 +205,59 @@ const App = () => {
         </div>
       </section>
 
+      {/* 交通樞紐 Transportation - (展示捷運與交流道圖片) */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+          
+          <div className="w-full lg:w-1/2 flex flex-col justify-center">
+            <h2 className="text-3xl lg:text-4xl font-light tracking-wide mb-8 text-neutral-900">
+              Transportation
+            </h2>
+            <p className="text-neutral-500 leading-loose text-lg mb-8 font-light">
+              無與倫比的交通樞紐潛力。<br/><br/>
+              步行可達即將通車的萬大線中正國中站 (LG10)，且快速銜接國道3號金城交流道。無論是雙北通勤人潮，或是物流運輸，都能提供企業最高效的交通優勢。
+            </p>
+          </div>
+
+          <div className="w-full lg:w-1/2 flex flex-col gap-6">
+            <div className="bg-neutral-50 border border-neutral-100 p-4">
+              <p className="text-xs tracking-widest uppercase text-neutral-400 mb-3">未來萬大線 LG10 站</p>
+              <img 
+                src="/中正國中站LG10.png" 
+                alt="中正國中站LG10" 
+                className="w-full h-auto object-contain"
+              />
+            </div>
+            <div className="bg-neutral-50 border border-neutral-100 p-4">
+              <p className="text-xs tracking-widest uppercase text-neutral-400 mb-3">國道 3 號金城交流道</p>
+              <img 
+                src="/國3金城交流道.png" 
+                alt="國道3號金城交流道" 
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* 聯絡區塊 Contact - 滿版簡潔聯絡資訊 */}
-      <section id="contact" className="py-32 bg-white">
+      <section id="contact" className="py-32 bg-neutral-900 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl lg:text-4xl font-light tracking-wide text-neutral-900 mb-6">
+          <h2 className="text-3xl lg:text-4xl font-light tracking-wide mb-6">
             Contact
           </h2>
-          <p className="text-neutral-500 tracking-[0.2em] mb-12 uppercase text-sm">
+          <p className="text-neutral-400 tracking-[0.2em] mb-12 uppercase text-sm">
             【 誠信出租 · 仲介勿擾 】
           </p>
 
-          <div className="bg-neutral-50 p-12 lg:p-16 border border-neutral-100 flex flex-col items-center">
-            <h3 className="text-xl font-light text-neutral-800 mb-2">屋主 鄭先生</h3>
-            <p className="text-neutral-400 font-light mb-10 text-sm">Owner & Manager</p>
+          <div className="p-12 lg:p-16 border border-neutral-800 flex flex-col items-center bg-neutral-950/50">
+            <h3 className="text-xl font-light mb-2">屋主 鄭先生</h3>
+            <p className="text-neutral-500 font-light mb-10 text-sm">Owner & Manager</p>
 
             <a 
               href="tel:0955599119" 
-              className="text-4xl lg:text-5xl font-light tracking-widest text-neutral-900 mb-12 hover:opacity-70 transition-opacity"
+              className="text-4xl lg:text-5xl font-light tracking-widest mb-12 hover:text-neutral-400 transition-colors"
             >
               0955-599-119
             </a>
@@ -211,13 +267,13 @@ const App = () => {
                 href="https://line.me/ti/p/aM-a4jS34u" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex-1 border border-neutral-900 bg-neutral-900 text-white py-4 tracking-widest text-sm hover:bg-neutral-800 transition-colors text-center uppercase"
+                className="flex-1 border border-white bg-white text-neutral-900 py-4 tracking-widest text-sm hover:bg-neutral-200 transition-colors text-center uppercase"
               >
                 加入 Line 聯繫
               </a>
               <a 
                 href="tel:0955599119" 
-                className="flex-1 border border-neutral-200 bg-white text-neutral-900 py-4 tracking-widest text-sm hover:bg-neutral-50 transition-colors text-center uppercase"
+                className="flex-1 border border-neutral-700 bg-transparent text-white py-4 tracking-widest text-sm hover:bg-neutral-800 transition-colors text-center uppercase"
               >
                 立即撥打
               </a>
@@ -227,7 +283,7 @@ const App = () => {
       </section>
 
       {/* 頁尾 Footer */}
-      <footer className="bg-neutral-900 text-neutral-400 py-12 text-center text-xs tracking-widest uppercase">
+      <footer className="bg-neutral-950 text-neutral-500 py-12 text-center text-xs tracking-widest uppercase border-t border-neutral-900">
         <div className="max-w-7xl mx-auto px-6">
           <p>© {new Date().getFullYear()} CHENG'S PROPERTY. ALL RIGHTS RESERVED.</p>
         </div>
