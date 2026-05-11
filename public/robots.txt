@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://huootan.github.io/tucheng-store-rental/sitemap.xml
