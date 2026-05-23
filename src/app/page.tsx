@@ -188,7 +188,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* 空間藝廊 Gallery (展示 p3, p4, p5, p6) */}
+        {/* 空間藝廊 Gallery (展示 p3, p4, p5, p6, p7) */}
         <section className="pb-24 lg:pb-32 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -203,6 +203,10 @@ export default function App() {
               </div>
               <div className="relative h-[300px] lg:h-[450px] overflow-hidden group bg-neutral-100">
                 <img src={`${basePath}/p6.jpg`} alt="土城店面室內空間實景照 4 - 開闊無壓迫感" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+              </div>
+              {/* 新增的 p7.jpg */}
+              <div className="relative h-[300px] lg:h-[450px] overflow-hidden group bg-neutral-100">
+                <img src={`${basePath}/p7.jpg`} alt="土城店面室內空間實景照 5 - 空間細節展示" className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
               </div>
             </div>
           </div>
