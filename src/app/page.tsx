@@ -176,11 +176,11 @@ export default function App() {
                   className="absolute inset-0 w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <div className="relative h-[300px] lg:h-[400px] bg-neutral-100 overflow-hidden">
+              <div className="bg-neutral-100 overflow-hidden">
                 <img 
                   src={`${basePath}/p1.jpg`} 
                   alt="新北市土城區店面外部環境實景 - 大面寬店面" 
-                  className="absolute inset-0 w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-auto grayscale-[15%] hover:grayscale-0 transition-all duration-500"
                 />
               </div>
             </div>
