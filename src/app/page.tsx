@@ -259,6 +259,61 @@ export default function App() {
           </div>
         </section>
 
+        {/* 多元招商方案 Flexible Options */}
+        <section className="py-24 lg:py-32 bg-white border-t border-neutral-100">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            
+            <div className="text-center mb-20">
+              <h2 className="text-3xl lg:text-4xl font-light tracking-wide text-neutral-900">
+                Flexible Options | 多元招商方案
+              </h2>
+              <p className="mt-4 text-neutral-500 font-light tracking-widest text-sm max-w-2xl mx-auto leading-relaxed">
+                無論是長期深耕還是短期測試，我們提供最彈性的空間解方。
+              </p>
+              <div className="mt-6 w-12 h-[1px] bg-neutral-400 mx-auto"></div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+              {/* 卡片一 */}
+              <article className="group border border-neutral-100 p-8 lg:p-10 bg-neutral-50/50 hover:bg-white hover:border-neutral-900 hover:shadow-xl hover:shadow-neutral-100/50 transition-all duration-500 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs tracking-[0.2em] uppercase text-neutral-400 mb-6 block">Option 01</span>
+                  <h3 className="text-xl tracking-wide font-normal mb-4 text-neutral-900">旗艦連鎖 / 雲端廚房</h3>
+                  <div className="w-8 h-[1px] bg-neutral-300 mb-6 group-hover:w-16 transition-all duration-500"></div>
+                  <p className="text-neutral-500 font-light leading-relaxed text-sm">
+                    具備三相電、天然氣、排煙排水系統；附專屬卸貨區，極利於物流與外送；前三個月免租期，保障營運穩定。
+                  </p>
+                </div>
+              </article>
+
+              {/* 卡片二 */}
+              <article className="group border border-neutral-100 p-8 lg:p-10 bg-neutral-50/50 hover:bg-white hover:border-neutral-900 hover:shadow-xl hover:shadow-neutral-100/50 transition-all duration-500 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs tracking-[0.2em] uppercase text-neutral-400 mb-6 block">Option 02</span>
+                  <h3 className="text-xl tracking-wide font-normal mb-4 text-neutral-900">短期快閃 / 特賣會</h3>
+                  <div className="w-8 h-[1px] bg-neutral-300 mb-6 group-hover:w-16 transition-all duration-500"></div>
+                  <p className="text-neutral-500 font-light leading-relaxed text-sm">
+                    接受 1 至 3 個月短期彈性租賃；正對青山廣場，自帶週末休閒人潮；9 米大面寬廣告效益極佳。
+                  </p>
+                </div>
+              </article>
+
+              {/* 卡片三 */}
+              <article className="group border border-neutral-100 p-8 lg:p-10 bg-neutral-50/50 hover:bg-white hover:border-neutral-900 hover:shadow-xl hover:shadow-neutral-100/50 transition-all duration-500 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs tracking-[0.2em] uppercase text-neutral-400 mb-6 block">Option 03</span>
+                  <h3 className="text-xl tracking-wide font-normal mb-4 text-neutral-900">微型創業 / 分割招租</h3>
+                  <div className="w-8 h-[1px] bg-neutral-300 mb-6 group-hover:w-16 transition-all duration-500"></div>
+                  <p className="text-neutral-500 font-light leading-relaxed text-sm">
+                    47.7 坪室內空間具備分割潛力；歡迎獨立咖啡廳、微型診所或個人工作室；總租金門檻降低，進駐重劃區更輕鬆。
+                  </p>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </section>
+
         {/* 交通樞紐 Transportation */}
         <section className="py-24 lg:py-32 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
