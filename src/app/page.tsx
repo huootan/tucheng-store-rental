@@ -28,8 +28,8 @@ export default function App() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "RealEstateListing",
-    "name": "新北土城重劃區大面寬黃金店面出租",
-    "description": "權狀80坪，室內47.7坪，大面寬約9米，近捷運中正國中站LG10與金城交流道。適合各大品牌進駐。",
+    "name": "土城店面出租 | 新北重劃區大面寬黃金店面",
+    "description": "土城店面出租首選！權狀80坪，室內47.7坪，大面寬約9米，近捷運中正國中站LG10與金城交流道。適合各大品牌進駐。",
     "datePosted": new Date().toISOString(),
     "offers": {
       "@type": "Offer",
@@ -94,7 +94,7 @@ export default function App() {
         </header>
 
         {/* 隱藏的 H1，專為搜尋引擎設計的關鍵字佈局 */}
-        <h1 className="sr-only">新北市土城區重劃區 金店面出租 權狀80坪大面寬 屋主自租</h1>
+        <h1 className="sr-only">土城店面出租 | 新北市土城區重劃區 質感黃金店面出租 權狀80坪大面寬 屋主自租</h1>
 
         {/* 主視覺 Hero - 需求1修改：使用 p3.jpg */}
         <section className="relative h-screen min-h-[700px] flex items-center justify-center">

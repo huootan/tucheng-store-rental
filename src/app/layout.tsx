@@ -6,16 +6,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 // 在這裡設定網站的 SEO 與 Open Graph (OG) 標籤
 export const metadata: Metadata = {
-  title: "土城質感店面誠摯出租",
-  description: "權狀80坪/超大面寬9m/開門即公園/鄰近捷運萬大線與金城交流道，適合各大品牌進駐。屋主自租，仲介勿擾。",
+  title: "土城店面出租 | 新北重劃區質感大面寬黃金店面 - 屋主誠摯出租",
+  description: "新北土城店面出租首選！權狀80坪/室內47.7坪/超大面寬9m/開門即公園/鄰近捷運萬大線與金城交流道。無論是土城店面、黃金店面或大空間需求，都適合各大品牌進駐。屋主自租，仲介勿擾。",
+  keywords: ["土城", "土城店面", "店面", "土城店面出租", "店面出租", "新北土城", "土城重劃區", "黃金店面", "大面寬店面", "屋主自租", "新北店面"],
   icons: {
     icon: "/favicon.ico", 
   },
   openGraph: {
-    title: "【新北土城重劃區金店面出租】超大面寬黃金店面",
-    description: "權狀80坪/超大面寬9m/開門即公園/鄰近公車站。誠信出租，歡迎預約看屋！",
+    title: "【土城店面出租】新北重劃區超大面寬黃金店面",
+    description: "新北土城店面出租首選！權狀80坪/大面寬9m/開門即公園。誠信出租，歡迎預約看屋！",
     url: "https://huootan.github.io/tucheng-store-rental",
-    siteName: "土城質感店面誠摯出租",
+    siteName: "土城店面出租 | 質感大面寬黃金店面",
     images: [
       {
         // OG 圖片必須使用完整的絕對路徑 (包含 https)
