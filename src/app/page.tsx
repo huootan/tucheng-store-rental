@@ -362,7 +362,7 @@ export default function App() {
             
             <div className="w-full h-[400px] lg:h-[500px] bg-neutral-200 shadow-sm border border-neutral-200">
               <iframe 
-                src="https://www.google.com/maps?q=新北市土城區青雲路341號&output=embed" 
+                src="https://www.google.com/maps?q=新北市土城區青雲路341號&output=embed&language=zh-TW" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
