@@ -350,6 +350,31 @@ export default function App() {
           </div>
         </section>
 
+        {/* 地圖位置 Map */}
+        <section className="py-24 lg:py-32 bg-neutral-50 border-t border-neutral-100">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-light tracking-wide text-neutral-900">
+                Location
+              </h2>
+              <div className="mt-4 w-12 h-[1px] bg-neutral-400 mx-auto"></div>
+            </div>
+            
+            <div className="w-full h-[400px] lg:h-[500px] bg-neutral-200 shadow-sm border border-neutral-200">
+              <iframe 
+                src="https://www.google.com/maps?q=新北市土城區青雲路341號&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={false} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Maps - 新北市土城區青雲路341號"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
         {/* 聯絡區塊 Contact */}
         <section id="contact" className="py-32 bg-neutral-900 text-white">
           <div className="max-w-4xl mx-auto px-6 text-center">
