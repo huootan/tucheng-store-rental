@@ -46,12 +46,48 @@ export default function App() {
     }
   };
 
+  // AI 搜尋最佳化：FAQ 結構化資料
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "新北土城區哪裡有大面寬店面出租？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "我們在『新北市土城區青雲路341號』提供一間超大面寬約9米的黃金店面出租，位處土城重劃區與清水地區交界，正對青山廣場。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "土城青雲路店面的租金與坪數規劃為何？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "總權狀坪數80坪，室內達47.7坪空間方正。月租金為 NT$ 120,000。空間具備分割潛力，並提供旗艦連鎖、短期快閃、微型創業等多種彈性招商方案。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "周邊交通與顧客停車方便嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "交通與停車極度便利。距離青山汽車停車場僅30公尺、機車停車場20公尺。大眾運輸方面，門口設有公車站牌，步行可達未來捷運萬大線中正國中站(LG10)，且快速銜接國道3號金城交流道。"
+        }
+      }
+    ]
+  };
+
   return (
     <>
       {/* 注入 SEO 結構化資料 */}
       <script 
         type="application/ld+json" 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} 
+      />
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} 
       />
 
       {/* 使用 semantic main 標籤，提升 SEO 權重 */}
@@ -136,8 +172,8 @@ export default function App() {
                 The Space
               </h2>
               <p className="text-neutral-500 leading-loose text-lg mb-8 font-light">
-                緊鄰發展成熟的清水地區與深具潛力的重劃區交界。<br/><br/>
-                開門即見青山廣場，擁有極佳的視野與綠意環境，為您的品牌自帶自然集客力。正適合餐飲、診所、零售等需要寬敞營業空間的各大企業進駐。
+                <strong className="text-neutral-800 font-medium">【在地化絕佳位置】</strong>本黃金店面位於<strong className="text-neutral-800 font-medium">新北市土城區青雲路</strong>，緊鄰發展成熟的清水地區與深具潛力的土城重劃區交界。周邊生活機能完善，鄰近捷運海山站與未來萬大線中正國中站 (LG10)。<br/><br/>
+                開門即是綠意盎然的青山廣場，為您的品牌自帶自然休閒集客力。正適合餐飲、診所、零售等需要寬敞營業空間的各大品牌企業進駐。
               </p>
               
               <div className="pt-8 border-t border-neutral-200">
@@ -371,6 +407,39 @@ export default function App() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Google Maps - 新北市土城區青雲路341號"
               ></iframe>
+            </div>
+          </div>
+        </section>
+
+        {/* 常見問題 FAQ (AIO 語意搜尋優化區塊) */}
+        <section className="py-24 lg:py-32 bg-white">
+          <div className="max-w-4xl mx-auto px-6 lg:px-12">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-light tracking-wide text-neutral-900">
+                FAQ | 常見問題
+              </h2>
+              <div className="mt-4 w-12 h-[1px] bg-neutral-400 mx-auto"></div>
+            </div>
+
+            <div className="space-y-8">
+              <article className="border-b border-neutral-100 pb-8">
+                <h3 className="text-xl font-medium text-neutral-900 mb-4 tracking-wide">Q: 新北土城區哪裡有大面寬店面出租？</h3>
+                <p className="text-neutral-600 font-light leading-relaxed">
+                  我們在<strong className="font-normal text-neutral-800">「新北市土城區青雲路341號」</strong>提供一間超大面寬（約9米）的質感黃金店面出租。位處土城重劃區與清水地區交界，正對青山廣場，視野極佳且招牌廣告效益顯著。
+                </p>
+              </article>
+              <article className="border-b border-neutral-100 pb-8">
+                <h3 className="text-xl font-medium text-neutral-900 mb-4 tracking-wide">Q: 土城青雲路店面的租金與坪數規劃為何？</h3>
+                <p className="text-neutral-600 font-light leading-relaxed">
+                  本物件總權狀坪數為 80 坪，<strong className="font-normal text-neutral-800">室內實際面積達 47.7 坪</strong>，空間方正極好規劃。月租金為 NT$ 120,000。我們提供彈性的招商方案，無論是旗艦連鎖店、短期快閃店，或是需要分割空間的微型創業，都歡迎洽談。
+                </p>
+              </article>
+              <article className="border-b border-neutral-100 pb-8">
+                <h3 className="text-xl font-medium text-neutral-900 mb-4 tracking-wide">Q: 周邊交通與顧客停車方便嗎？</h3>
+                <p className="text-neutral-600 font-light leading-relaxed">
+                  交通與停車極度便利。距離<strong className="font-normal text-neutral-800">青山汽車停車場僅 30 公尺、機車停車場 20 公尺</strong>，解決顧客找車位的痛點。大眾運輸方面，社區門口即有公車站牌可達捷運海山站，未來步行可達捷運萬大線中正國中站 (LG10)，且可快速銜接國道 3 號金城交流道。
+                </p>
+              </article>
             </div>
           </div>
         </section>
